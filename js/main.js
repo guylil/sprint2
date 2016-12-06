@@ -8,11 +8,13 @@ var gImages = [
 
 
 function RenderImages() {
-    var strHTML;
-    var img = document.querySelector('.my-img');
+    var strHTML='';
+    var img = document.querySelector('.my-imges');
     for (var i = 0; i < gImages.length; i++) {
-        strHTML += '<img class= "my-img" src="' + gImages[i].url + '"></img>';
+        strHTML += '<img class="my-img" src="' + gImages[i].url + '">';
     }
+    console.log('strHTML: ',strHTML);
+    
     img.innerHTML = strHTML;
 }
 

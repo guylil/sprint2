@@ -68,7 +68,9 @@
     height: em(43px);
     background-color: #222;
 }
+
 .my-img{
-    height: 100px;
-    width: auto;
+    height: em(43px);
+    width:auto;
+    margin: em(10px);           
 }
