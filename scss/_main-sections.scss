@@ -1,4 +1,8 @@
 .section{
+    max-width: 1020px;
+    margin: auto;
+    padding-left: em(45px);
+    padding-right: em(100px);
 }
 
 .gallery{
@@ -10,8 +14,46 @@
 }
 
 .about{
-    background-color:yellow;
+    background-color: #2eb398;
+    height: 340px; //should be max-height
+    flex-wrap: wrap;
 }
-.formGetInTouch{
+.article{
+    font-family: "Maven Pro Regular";
+    font-weight: 400;
+    max-height: 340px;
+    flex-flow: column;
+    padding: 0 em(20px);
+}
+.article-0title{
+    margin-top: em(29px);
+    // max-height: rem(22px);
+    color: #d7fcf5;
+    font-size: rem(30px);
+    line-height: rem(5px);
+}
+.article-1title{
+    margin-top: em(13px);    
+    // max-width: 249px;
+    max-height: rem(17px);
+    color: #20816d;
+    font-size: rem(18px);
+    line-height: rem(22px);
+}
+.article-text{
+    margin-top: em(20px);        
+    max-width: 581px;
+    max-height: rem(76px);
+    color: #d7fcf5;
+    font-family: Lato;
+    font-size: rem(12px);
+    line-height: rem(22px);
+}
+.article-img{
+    width: 180px;
+    height: 206px;
+}
+
+.form-get-in-touch{
     background-color: grey;
 }
