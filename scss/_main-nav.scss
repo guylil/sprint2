@@ -2,6 +2,8 @@
     --main-nav-height: em(63px);  
     height: var(--main-nav-height);
     background-color: #323232;
+    max-width: 1020px;
+    margin: auto;
 }
 
   .main-nav__items {

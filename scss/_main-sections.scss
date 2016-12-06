@@ -5,12 +5,17 @@
     padding-right: em(100px);
 }
 
-.gallery{
-    background-color: orangered;
+.gallery {
+    background-image: url("../assets/img/staticGallery.png");
+    background-color: white;
+    height: em(720px);
+    
 }
 .generator{
-    background-color:lightgreen;
+    background-color:lightslategray;
     display: none; 
+    height: em(720px);
+    height: em(720px);
 }
 
 .about{
@@ -55,5 +60,11 @@
 }
 
 .form-get-in-touch{
-    background-color: grey;
+    background-color: #323232;
+    height: em(564px);
+
+}
+.main-footer{
+    height: em(43px);
+    background-color: #222;
 }
