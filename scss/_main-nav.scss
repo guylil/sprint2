@@ -1,3 +1,36 @@
 .main-nav{
-    background-color: black;
+    --main-nav-height: em(63px);  
+    height: var(--main-nav-height);
+    background-color: #323232;
+}
+
+  .main-nav__items {
+    flex-direction: row;
+    list-style-type: none;
+  }
+  .main-nav__item{
+    padding: 1em;
+    margin-left: 0;
+    margin-bottom: 1em;
+  }
+
+  .clicked{
+      color: #306f62;
+  }
+
+  .pic{
+      padding:0;
+      margin-bottom: 0;
+      margin: auto;
+  }
+
+.arrow-down {
+  width: 88px; 
+  height: 0px; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;  
+  border-top: 20px solid #323232;
+  padding: 0;
+  margin:auto;
+  margin-top: 0;
 }
