@@ -1,9 +1,9 @@
 'use strict';
 
 var gImages = [
-    { id: '1', url: '/assets/img/best-crying-jordan-memes.jpg', keywords: ['bla,sle'] },
-    { id: '2', url: '/assets/img/Captain-Picard-Facepalm.jpg', keywords: ['bla,sle'] },
-    { id: '3', url: '/assets/img/Disaster-Girl.jpg', keywords: ['bla,sle'] },
+    { id: '1', url: '/assets/img/best-crying-jordan-memes.jpg', keywords: ['cry'] },
+    { id: '2', url: '/assets/img/Captain-Picard-Facepalm.jpg', keywords: ['upset'] },
+    { id: '3', url: '/assets/img/Disaster-Girl.jpg', keywords: ['naughty'] },
 ];
 
 
