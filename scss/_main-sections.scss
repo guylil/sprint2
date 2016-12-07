@@ -5,10 +5,12 @@
     padding-left: em(45px);
     padding-right: em(100px);//TODO:ask guy what is it for
 }
-
+.gallery{
+    display: none;     
+}
 .generator{
     background-color:lightslategray;
-    display: none; 
+    display: block; 
     height: em(720px);
     height: em(720px);
 }
