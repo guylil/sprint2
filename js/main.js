@@ -1,11 +1,10 @@
 'use strict';
 
 var gImages = [
-    { id: '1', url: '/assets/img/best-crying-jordan-memes.jpg', keywords: ['cry'] },
-    { id: '2', url: '/assets/img/Captain-Picard-Facepalm.jpg', keywords: ['upset'] },
-    { id: '3', url: '/assets/img/Disaster-Girl.jpg', keywords: ['naughty'] },
+    { id: '1', url: '/assets/img/1.jpg', keywords: ['cry','sad'] },
+    { id: '2', url: '/assets/img/2.jpg', keywords: ['sarcastic'] },
+    { id: '3', url: '/assets/img/3.jpg', keywords: ['naughty','girl'] },
 ];
-
 
 function RenderImages() {
     var img = document.querySelector('.my-imges');
@@ -23,3 +22,9 @@ function RenderImages() {
 }
 
 RenderImages();
+
+//TODO: finish when clickedCounter is made by guy the func should be called by search box
+function getDomKeyWord(clickedCounter){
+    var elKeyWord = document.querySelector('.girl');
+    elKeyWord.style.fontSize='clickedCounter'+'px';
+}
