@@ -9,10 +9,15 @@
     display: none;     
 }
 .generator{
-    background-color:lightslategray;
+    background-color:lightpink;
+    color: darkred;
     display: block; 
     height: em(720px);
     height: em(720px);
+}
+.gen-container{
+    display: flex;
+    justify-content: space-between 
 }
 
 .about{
