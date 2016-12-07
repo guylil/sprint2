@@ -25,6 +25,7 @@ function RenderImages(images) {
 
 }
 
+
 RenderImages(gImages);
 
 //TODO: finish when clickedCounter is made by guy the func should be called by search box
@@ -50,10 +51,10 @@ function getDomKeyWord(clickedCounter) {
 //     RenderImages();
 // }
 
-function renderCards(){
+function renderCards() {
 
 };
 
-function renderList(){
+function renderList() {
 
 };
