@@ -21,7 +21,7 @@ function RenderImages(images) {
         strHTML += hex;
     }
     img.innerHTML = strHTML;
-    console.log('strHTML: ', strHTML);
+    // console.log('strHTML: ', strHTML);
 
 }
 
@@ -49,3 +49,11 @@ function getDomKeyWord(clickedCounter) {
 //     elGallery.innerHTML = strHTML;
 //     RenderImages();
 // }
+
+function renderCards(){
+
+};
+
+function renderList(){
+
+};
