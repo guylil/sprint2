@@ -3,14 +3,19 @@
 var gImages = [
     { id: '1', url: '/assets/img/1.jpg', keywords: ['cry', 'sad'] },
     { id: '2', url: '/assets/img/2.jpg', keywords: ['sarcastic'] },
-    { id: '3', url: '/assets/img/3.jpg', keywords: ['naughty', 'girl'] },
+    // { id: '3', url: '/assets/img/3.jpg', keywords: ['naughty', 'girl'] },
+    // { id: '1', url: '../assets/img/1.png', keywords: ['pirate'] },
+    { id: '2', url: '../assets/img/2.jpg', keywords: ['future'] },
+    { id: '3', url: '../assets/img/3.png', keywords: ['fry'] },
+    { id: '4', url: '../assets/img/4.png', keywords: ['everywhere'] },
 ];
 
-function RenderImages() {
+
+function RenderImages(images) {
     var img = document.querySelector('.my-imges');
     var strHTML = '';
-    for (var i = 0; i < gImages.length; i++) {
-        var hex = '<div class="hexagon2" style="background-image:url(' + gImages[i].url + ');">' +
+    for (var i = 0; i < images.length; i++) {
+        var hex = '<div class="hexagon2" style="background-image:url(' + images[i].url + ');">' +
             '<div class="hexTop"></div>' +
             '<div class="hexBottom"></div>' +
             '</div>';
@@ -21,7 +26,7 @@ function RenderImages() {
 
 }
 
-RenderImages();
+RenderImages(gImages);
 
 //TODO: finish when clickedCounter is made by guy the func should be called by search box
 function getDomKeyWord(clickedCounter) {
