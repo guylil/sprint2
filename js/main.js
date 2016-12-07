@@ -13,7 +13,7 @@ function RenderImages() {
     for (var i = 0; i < gImages.length; i++) {
         strHTML += '<img class="my-img" src="' + gImages[i].url + '">';
     }
-    console.log('strHTML: ',strHTML);
+    // console.log('strHTML: ',strHTML);
     
     img.innerHTML = strHTML;
 }

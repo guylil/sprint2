@@ -20,8 +20,11 @@
             <li><a href="#" class="main-nav__item">GET IN TOUCH</a></li>
         </ul>
     </nav>
+    <div class=" search-container section main-nav flex">
+        <input type="text" name="search-box" placeholder="Search your meme" onkeyup="memeSearch(gImages)" />
+    </div>
     <main>
-        <section class=" section gallery">
+        <section class=" section ">
             <h1>Meme Gallery</h1>
             <div class="my-imges flex flex-wrap"></div>
         </section>
@@ -29,7 +32,7 @@
             <h2>Meme Generator</h2>
         </section>
         <section class=" section about flex">
-            <div class="hexagon">
+            <div class="hexagon flex">
                 <div class="face1"></div>
                 <div class="face2"></div>
                 <!--<img src="assets/img/about.png" alt="About picture" class=" article-img hexagon"></img>-->
@@ -66,18 +69,18 @@
                     <label for="exampleTextarea">Example textarea</label>
                     <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
                 </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
+                <div class="form-check">
+                    <label class="form-check-label">
         <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
         Option two can be something else and selecting it will deselect option one
       </label>
-                    </div>
-                    <div class="form-check disabled">
-                        <label class="form-check-label">
+                </div>
+                <div class="form-check disabled">
+                    <label class="form-check-label">
         <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
         Option three is disabled
       </label>
-                    </div>
+                </div>
                 </fieldset>
                 <div class="form-check">
                     <label class="form-check-label">
@@ -92,6 +95,7 @@
     <footer class=" main-footer">JUST ordinary plain black</footer>
 
     <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
 </body>
 
 </html>
