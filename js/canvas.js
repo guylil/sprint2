@@ -4,6 +4,9 @@ console.log('hello canvas');
 function canvasPaint() {
     var elCanvas = document.getElementById('canvas');
     // elCanvas.display='none';
+    canvas.width =800;
+    canvas.heigth=600;
+    console.log(elCanvas);
     var ctx = canvas.getContext('2d');
     ctx.fillStyle = '#0e70d1';
     var img = new Image();
