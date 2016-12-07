@@ -1,9 +1,9 @@
 'use strict';
 
 var gImages = [
-    { id: '1', url: '/assets/img/1.jpg', keywords: ['cry','sad'] },
+    { id: '1', url: '/assets/img/1.jpg', keywords: ['cry', 'sad'] },
     { id: '2', url: '/assets/img/2.jpg', keywords: ['sarcastic'] },
-    { id: '3', url: '/assets/img/3.jpg', keywords: ['naughty','girl'] },
+    { id: '3', url: '/assets/img/3.jpg', keywords: ['naughty', 'girl'] },
 ];
 
 function RenderImages() {
@@ -24,7 +24,24 @@ function RenderImages() {
 RenderImages();
 
 //TODO: finish when clickedCounter is made by guy the func should be called by search box
-function getDomKeyWord(clickedCounter){
+function getDomKeyWord(clickedCounter) {
     var elKeyWord = document.querySelector('.girl');
-    elKeyWord.style.fontSize='clickedCounter'+'px';
+    elKeyWord.style.fontSize = clickedCounter + 'px';
 }
+
+// function cardModeToggle() {
+//     var btn = document.querySelector('.card');
+//     console.log('elbtn', btn);
+//     btn.addEventListener('click', displayCard);
+// }
+
+// cardModeToggle();
+
+// function displayCard() {
+//     var strHTML = '<div class="my-imges flex flex-direction-row"></div>';
+//     console.log('strHTML', strHTML);
+
+//     var elGallery = document.querySelector('.main gallery');
+//     elGallery.innerHTML = strHTML;
+//     RenderImages();
+// }
