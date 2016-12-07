@@ -3,11 +3,10 @@
 var gImages = [
     { id: '1', url: '/assets/img/1.jpg', keywords: ['cry', 'sad'] },
     { id: '2', url: '/assets/img/2.jpg', keywords: ['sarcastic'] },
-    // { id: '3', url: '/assets/img/3.jpg', keywords: ['naughty', 'girl'] },
-    // { id: '1', url: '../assets/img/1.png', keywords: ['pirate'] },
-    { id: '2', url: '../assets/img/2.jpg', keywords: ['future'] },
-    { id: '3', url: '../assets/img/3.png', keywords: ['fry'] },
-    { id: '4', url: '../assets/img/4.png', keywords: ['everywhere'] },
+    { id: '3', url: '/assets/img/3.png', keywords: ['naughty', 'girl'] },
+    { id: '4', url: '../assets/img/4.png', keywords: ['pirate'] },
+    { id: '5', url: '../assets/img/6.jpg', keywords: ['future'] },
+    { id: '6', url: '../assets/img/5.png', keywords: ['fry'] },
 ];
 
 
