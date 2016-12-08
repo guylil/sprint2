@@ -12,6 +12,7 @@ var gImages = [
 
 
 function RenderImages(images) {
+    editMeme()
     var img = document.querySelector('.my-imges');
     var strHTML = '';
     for (var i = 0; i < images.length; i++) {
@@ -59,10 +60,16 @@ function renderList() {
 
 };
 
-document.querySelector('.back-btn').addEventListener('click', function() {
+document.querySelector('.back-btn').addEventListener('click', function () {
     document.querySelector('.gallery').style.display = 'block';
     document.querySelector('.generator').style.display = 'none';
 });
 
-
-
+function backToGallery() {
+    document.querySelector('.generator').style.display = 'none';
+    document.querySelector('.gallery').style.display = 'block';
+}
+function editMeme(){
+    document.querySelector('.generator').style.display = 'block';
+    document.querySelector('.gallery').style.display = 'none';    
+}

@@ -31,6 +31,7 @@
             <div class="">
                 <button type="button" class=" card">	card mode &#8594;	</button>
                 <button type="button" class=" list">list mode &#8595;</button>
+                <button type="button" class=" list" onclick="editMeme()">edit meme</button>
                 <p>
                     <span class="cry">cry</span>
                     <span class="sad">sad</span>
@@ -48,35 +49,38 @@
                 </div>
             </div>
         </section>
-        <section class=" section generator">
+        <section class=" section generator flex">
             <!--CANVAS AND STUFF-->
             <div class=" gen-container">
                 <canvas id="canvas" class=" canvas" height="300" width="400">CANVAS</canvas>
-                <div>Functions Container
-                    <!--<div>Guy's Funftions</div>-->
-                    <div>
+                <div> Edit Your Meme
+                    <div class="edit-container flex-wrap">
                         <!--//noa is chacking canvas-->
-                        <canvas id="noaCanvas" width="578" height="200"></canvas>
+                        <!--<canvas id="noaCanvas" width="578" height="200"></canvas>-->
                         <!--//mini text editor-->
                         <div class="text-controllers upper-line">
-                            <button type="button" class="back-btn">Go back and choose another meme</button>
+                            <button type="button" class="back-btn" onclick="backToGallery()">Go back and choose another meme</button>
                             <div class="controller">
-                                <textarea class="textarea" placeholder="Enter text"></textarea>
+                                <input type="textarea" name="textarea1" class=" textarea1" placeholder="Enter text" onkeyup="enterText1(this)"></input>
                                 <div class="toolbar">
                                     <div class="btn-group">
                                         <button class="btn align-left" href="#">&#8866;</button>
                                         <button class="btn align-center" href="#">&#8803;</button>
                                         <button class="btn align-right" href="#">&#8867;</button>
-                                    </div>
-                                    <div class="btn-group">
+                                        <!--</div>-->
+                                        <!--<div class="btn-group">-->
                                         <button class="btn dencrease-font-size" href="#">&#43;</button>
                                         <button class="btn increase-font-size" href="#">&#8722;</button>
-                                    </div>
-                                    <div class="btn-group">
+                                        <!--</div>-->
+                                        <!--<div class="btn-group">-->
                                         <button class="btn color" href="#">&#x270D;</button>
                                         <button class="btn Text shadow" href="#">&#x2751;</button>
                                         <button class="btn Change font" href="#">&#65;</button>
                                         <button class="delete btn">&#x1F5D1;</button>
+                                        <button class="delete btn">&#x1F5D1;</button>
+                                        <a id="download" onclick="downloadImg(this)">
+                                            <button>Download as image</button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -84,18 +88,18 @@
 
                         <div class="text-controllers lower-line">
                             <div class="controller">
-                                <textarea class="textarea" placeholder="Enter text"></textarea>
+                                <input type="textarea" name="textarea2" class=" textarea2" placeholder="Enter text" onkeyup="enterText1(this)"></input>
                                 <div class="toolbar">
                                     <div class="btn-group">
                                         <button class="btn align-left" href="#">&#8866;</button>
                                         <button class="btn align-center" href="#">&#8803;</button>
                                         <button class="btn align-right" href="#">&#8867;</button>
-                                    </div>
-                                    <div class="btn-group">
+                                        <!--</div>-->
+                                        <!--<div class="btn-group">-->
                                         <button class="btn dencrease-font-size" href="#">&#43;</button>
                                         <button class="btn increase-font-size" href="#">&#8722;</button>
-                                    </div>
-                                    <div class="btn-group">
+                                        <!--</div>-->
+                                        <!--<div class="btn-group">-->
                                         <button class="btn color" href="#">&#x270D;</button>
                                         <button class="btn Text shadow" href="#">&#x2751;</button>
                                         <button class="btn Change font" href="#">&#65;</button>

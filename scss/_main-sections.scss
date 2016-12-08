@@ -6,10 +6,12 @@
     padding-right: em(100px);//TODO:ask guy what is it for
 }
 .gallery{
-    display: block;     
+    display: block;         
 }
 .generator{
-    background-color:lightpink;
+
+    justify-content: space-between;
+    background-color:rosybrown;
     color: darkred;
     display: none; 
     height: em(720px);
@@ -17,9 +19,11 @@
 }
 .gen-container{
     display: flex;
-    justify-content: space-between 
+    justify-content: center; 
 }
-
+.edit-container{
+    padding: 8px;    
+}
 .about{
     background-color: #2eb398;
     height: 340px; //should be max-height
