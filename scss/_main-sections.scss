@@ -6,12 +6,12 @@
     padding-right: em(100px);//TODO:ask guy what is it for
 }
 .gallery{
-    display: none;     
+    display: block;     
 }
 .generator{
     background-color:lightpink;
     color: darkred;
-    display: block; 
+    display: none; 
     height: em(720px);
     height: em(720px);
 }

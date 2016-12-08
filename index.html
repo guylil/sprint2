@@ -8,22 +8,24 @@
 </head>
 
 <body>
-    <nav class=" main-nav">
-        <ul class=" flex main-nav__items justify-center">
-            <li><a href="#" class="main-nav__item clicked">MEME Generator</a></li>
-            <li><a href="#" class="main-nav__item">ABOUT</a></li>
-            <li>
-                <a href="#" class="main-nav__item pic"><img src="assets/logo.png" alt="triangle pic"></a>
-                <div class="arrow-down"></div>
-            </li>
-            <li><a href="#" class="main-nav__item">filler</a></li>
-            <li><a href="#" class="main-nav__item">GET IN TOUCH</a></li>
-        </ul>
-    </nav>
-    <div class="">
-        <input type="text" name="search-box" class=" section" placeholder="Search your meme" onkeyup="RenderImages(memeSearch(gImages))"
-        />
-    </div>
+    <section class="Container">
+        <nav class=" main-nav">
+            <ul class=" flex main-nav__items justify-center">
+                <li><a href="#" class="main-nav__item clicked">MEME Generator</a></li>
+                <li><a href="#" class="main-nav__item">ABOUT</a></li>
+                <li>
+                    <a href="#" class="main-nav__item pic"><img src="assets/logo.png" alt="triangle pic"></a>
+                    <!--<div class="arrow-down"></div>-->
+                </li>
+                <li><a href="#" class="main-nav__item">filler</a></li>
+                <li><a href="#" class="main-nav__item">GET IN TOUCH</a></li>
+            </ul>
+        </nav>
+        <div class="">
+            <input type="text" name="search-box" class=" section" placeholder="Search your meme" onkeyup="RenderImages(memeSearch(gImages))"
+            />
+        </div>
+    </section>
     <main>
         <section class=" section gallery">
             <div class="">
@@ -37,7 +39,11 @@
                     <span class="girl">girl</span>
                 </p>
             </div>
-            <div class="main gallery">
+          
+
+        </section>
+        <section>
+              <div class="gallery">
                 <div class="my-imges">
                 </div>
             </div>
