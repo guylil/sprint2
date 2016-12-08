@@ -3,9 +3,9 @@ console.log('hello canvas');
 
 function canvasPaint(meme = '../assets/img/3.png', canvasHeight = 300, canvasWidth = 400, inputTopText = "not sure if...", inputBottomText = "or if....", topTextHeight = 7, bottomTextHeight = 7, topTextAlign = 40, bottomTextAlign = 150, textFontSize = 30, topTextColor = 'white', bottomTextColor = 'red', transText = 0.5) {
     var elCanvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
     canvas.height = canvasHeight;
     canvas.width = canvasWidth;
-    var ctx = canvas.getContext('2d');
     // ctx.fillStyle = '#0e70d1';
     var img = new Image();
     img.src = meme;
@@ -31,15 +31,25 @@ function canvasPaint(meme = '../assets/img/3.png', canvasHeight = 300, canvasWid
     };
     // var newImg=new Image();
     // newImg.id="meme";
-    // newImg.src = elCanvas.toDataURL();
+    memeUrl = canvas.toDataURL();
     // document.getElementById('img_generated').appendChild(newImg);
     // console.log(ctx);
     // return res
 }
-function addLines() {
+
+function addLinesAndText(textFont,topTextSize) {
+        // ctx.fillRect(0, 0, canvas.width, canvas.height / topTextHeight);
+        // ctx.fillRect(0, canvas.height - canvas.height / bottomTextHeight, canvas.width, canvas.height / bottomTextHeight);
+        // ctx.font = topTextSize + 'pt'+ textFont;
+        // ctx.fillStyle = topTextColor;
+        // ctx.fillText(inputTopText.toUpperCase(), topTextAlign, textFontSize + 3);
+        // ctx.font = topTextSize + 'pt'+ textFont;
+        // ctx.fillStyle = bottomTextColor;
+        // ctx.fillText(inputBottomText.toUpperCase(), bottomTextAlign, canvas.height - 5);
+
     // var elCanvas = document.getElementById('canvas');
     // var ctx = canvas.getContext('2d');
-    // ctx.drawImage(res, 0, 0, 300, 400);
+    // ctx.drawImage(, 0, 0, 300, 400);
     // = canvas.getContext('2d');
     // ctx.restore();        
     // ctx.font = '30pt Dvaid'
@@ -56,5 +66,6 @@ function addLines() {
 //     var text_title = stringTitle;
 //     ctx.fillText(stringTitle, 15, canvas.height / 2 + 35);
 // }); 
+
 canvasPaint();
 // addLines();
