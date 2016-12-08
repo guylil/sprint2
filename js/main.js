@@ -50,10 +50,18 @@ function getDomKeyWord(clickedCounter) {
 //     RenderImages();
 // }
 
-function renderCards(){
+function renderCards() {
 
 };
 
-function renderList(){
+function renderList() {
 
 };
+
+document.querySelector('.back-btn').addEventListener('click', function() {
+    document.querySelector('.gallery').style.display = 'block';
+    document.querySelector('.generator').style.display = 'none';
+});
+
+
+
