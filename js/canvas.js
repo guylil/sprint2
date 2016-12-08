@@ -18,9 +18,9 @@ function canvasPaint(meme = '../assets/img/3.png', canvasHeight = 300, canvasWid
         ctx.fillRect(0, canvas.height - canvas.height / bottomTextHeight, canvas.width, canvas.height / bottomTextHeight);
         // ctx.save();
         ctx.fillStyle = topTextColor;
-        ctx.fillText(inputTopText.toUpperCase(), topTextAlign, textFontSize + 3);
+        // ctx.fillText(inputTopText.toUpperCase(), topTextAlign, textFontSize + 3);
         ctx.fillStyle = bottomTextColor;
-        ctx.fillText(inputBottomText.toUpperCase(), bottomTextAlign, canvas.height - 5);
+        // ctx.fillText(inputBottomText.toUpperCase(), bottomTextAlign, canvas.height - 5);
         ctx.font = '10pt Dvaid'
         ctx.fillStyle = '#fff';
         ctx.fillText("Noa's & Guy's MemeGenerator", 10, 300);
@@ -70,20 +70,21 @@ function addLinesAndText(textFont, topTextSize) {
 canvasPaint();
 
 function enterText1(elInputText) {
-    ctx.fillText(" ", 150, 33);
     var text1 = document.getElementsByName('textarea1');
     var text2 = document.getElementsByName('textarea2');
-    console.log(text1[0].value);
-    // console.log(elInputText);
-    var inputTopText = ''+text1[0].value;
-    var inputBottomText = ''+text2[0].value;
     var elCanvas = document.getElementById('canvas');
     var ctx = canvas.getContext('2d');
-    ctx.restore();
+    var textFontSize =30;
+    // console.log(text1[0].value);
+    // console.log(elInputText);
+    ctx.font = textFontSize + 'pt David';
+    var inputTopText = '' + text1[0].value;
+    var inputBottomText = '' + text2[0].value;
+    // ctx.restore();
     // ctx.fillText(inputTopText.toUpperCase(), topTextAlign, textFontSize + 3);
     // ctx.fillText(inputBottomText.toUpperCase(), bottomTextAlign, canvas.height - 5);
-    ctx.fillText(inputTopText.toUpperCase(), 150, 33);
-    // ctx.fillText(inputBottomText.toUpperCase(), 40, canvas.height - 5);
+    ctx.fillText(inputTopText.toUpperCase(), 90, 33);
+    ctx.fillText(inputBottomText.toUpperCase(), 40, canvas.height - 5);
 
 
     // canvasPaint();
