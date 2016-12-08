@@ -68,20 +68,20 @@
                                 <input type="textarea" name="textarea1" class=" textarea1" placeholder="Enter text" onkeyup="enterText1(this)"></input>
                                 <div class="toolbar">
                                     <div class="btn-group">
-                                        <button class="btn align-left" href="#">&#8866;</button>
-                                        <button class="btn align-center" href="#">&#8803;</button>
-                                        <button class="btn align-right" href="#">&#8867;</button>
+                                        <button class="btn align-left" href="#" onclick="alignTopText(10)">&#8866;</button>
+                                        <button class="btn align-center" onclick="alignTopText(canvas.width/3)" href="#">&#8803;</button>
+                                        <button class="btn align-right" onclick="alignTopText(canvas.width-50-gInputTopText.length*15)" href="#">&#8867;</button>
                                         <!--</div>-->
                                         <!--<div class="btn-group">-->
-                                        <button class="btn dencrease-font-size" href="#">&#43;</button>
-                                        <button class="btn increase-font-size" href="#">&#8722;</button>
+                                        <button class="btn dencrease-font-size" href="#" onclick="increaseTextSize()" >&#43;</button>
+                                        <button class="btn increase-font-size" href="#" onclick="decreaseTextSize()">&#8722;</button>
                                         <!--</div>-->
                                         <!--<div class="btn-group">-->
                                         <button class="btn color" href="#">&#x270D;</button>
                                         <button class="btn Text shadow" href="#">&#x2751;</button>
                                         <button class="btn Change font" href="#">&#65;</button>
                                         <button class="delete btn">&#x1F5D1;</button>
-                                        <button class="delete btn">&#x1F5D1;</button>
+                                        <!--<button class="delete btn">&#x1F5D1;</button>-->
                                     </div>
                                 </div>
                             </div>
@@ -92,13 +92,13 @@
                                 <input type="textarea" name="textarea2" class=" textarea2" placeholder="Enter text" onkeyup="enterText1(this)"></input>
                                 <div class="toolbar">
                                     <div class="btn-group">
-                                        <button class="btn align-left" href="#">&#8866;</button>
-                                        <button class="btn align-center" href="#">&#8803;</button>
-                                        <button class="btn align-right" href="#">&#8867;</button>
+                                        <button class="btn align-left" href="#" onclick="alignBottomText(10)">&#8866;</button>
+                                        <button class="btn align-center" onclick="alignBottomText(canvas.width/3)" href="#">&#8803;</button>
+                                        <button class="btn align-right" onclick="alignBottomText(canvas.width-50-gInputBottomText.length*15)" href="#">&#8867;</button>
                                         <!--</div>-->
                                         <!--<div class="btn-group">-->
-                                        <button class="btn dencrease-font-size" href="#">&#43;</button>
-                                        <button class="btn increase-font-size" href="#">&#8722;</button>
+                                        <button class="btn dencrease-font-size" href="#" onclick="increaseTextSize()" >&#43;</button>
+                                        <button class="btn increase-font-size" href="#" onclick="decreaseTextSize()">&#8722;</button>
                                         <!--</div>-->
                                         <!--<div class="btn-group">-->
                                         <button class="btn color" href="#">&#x270D;</button>

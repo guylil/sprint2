@@ -5,61 +5,78 @@ editMeme();
 var gMeme = '../assets/img/3.png';
 var gCanvasHeight = 300; // TODO MAKE RESPONSIVE
 var gCanvasWidth = 400; // TODO MAKE RESPONSIVE
-var gInputTopText = 'YYY?';
-var gInputBottomText = 'Nope nope nope';
+var gInputTopText = 'write somthing';
+var gInputBottomText = 'here';
 var gTopTextHeight = 7;
 var gBottomTextHeight = 7;
 var gTopTextAlign = 40;
 var gBottomTextAlign = 150;
 var gTextFontSize = 30;
 var gTopTextColor = 'white';
-var gBottomTextColor = 'red';
+var gBottomTextColor = 'black';
 var gTransText = 0.5;
 
 function setMeme(memeSrc) {
     gMeme = memeSrc;
+    canvasPaint();
 };
 function setCanvasSize(canvasHeight, canvasWidth) {
     gCanvasHeight = canvasHeight;
     gCanvasWidth = canvasWidth;
+    canvasPaint();
 };
 
 function setText(stringTopText, StringBottumText) {
     gInputTopText = stringTopText;
     gInputBottomText = StringBottumText;
+    canvasPaint();
 };
 function setBars(topBar, bottomBar) {
     gTopTextHeight = topBar;
     gBottomTextHeight = bottomBar;
+    canvasPaint();
 };
+function alignTopText(number) {
+    gTopTextAlign = number;
+    canvasPaint();
+
+}
+function alignBottomText(number) {
+    gBottomTextAlign = number;
+    canvasPaint();
+}
 
 function increaseTextSize() {
     gTextFontSize++;
+    canvasPaint();
 };
 function decreaseTextSize() {
     gTextFontSize--;
+    canvasPaint();
 };
 function setTopTextColor(color) {
     gTopTextColor = color;
+    canvasPaint();
 };
 function setBottomTextColor(color) {
     gBottomTextColor = color;
+    canvasPaint();
 };
 
 function setOpacity(number) {
     gTransText = number;
+    canvasPaint();
 };
 // canvasPaint(gMeme, gCanvasHeight, gCanvasWidth, gInputTopText, gInputBottomText, gTopTextHeight, gBottomTextHeight, gTopTextAlign, gBottomTextAlign, gTextFontSize, gTopTextColor, gBottomTextColor, gTransText);
 function enterText1(elInputText) {
     var text1 = document.getElementsByName('textarea1');
     var text2 = document.getElementsByName('textarea2');
-    gTextFontSize=30;
+    gTextFontSize = 30;
     var inputTopText = '' + text1[0].value;
     var inputBottomText = '' + text2[0].value;
-    setText(inputTopText,inputBottomText);
+    setText(inputTopText, inputBottomText);
     canvasPaint();
 };
-// addLines();
 // function canvasPaint(meme, canvasHeight, canvasWidth, inputTopText, inputBottomText, topTextHeight, bottomTextHeight, topTextAlign , bottomTextAlign, textFontSize , topTextColor , bottomTextColor , transText)
 // function canvasPaint(meme = '../assets/img/3.png', canvasHeight = 300, canvasWidth = 400, inputTopText = "not sure if...", inputBottomText = "or if....", topTextHeight = 7, bottomTextHeight = 7, topTextAlign = 40, bottomTextAlign = 150, textFontSize = 30, topTextColor = 'white', bottomTextColor = 'red', transText = 0.5)
 
