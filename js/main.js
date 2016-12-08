@@ -13,20 +13,19 @@ var gImages = [
 function init() {
     RenderImages(gImages);
     //TODO:better put in HTML
-    document.querySelector('.back-btn').addEventListener('click', function () {
+    document.querySelector('.back-btn').addEventListener('click', function() {
         document.querySelector('.gallery').style.display = 'block';
         document.querySelector('.generator').style.display = 'none';
     });
+}
 
-    function backToGallery() {
-        document.querySelector('.generator').style.display = 'none';
-        document.querySelector('.gallery').style.display = 'block';
-    }
-    function editMeme() {
-        document.querySelector('.generator').style.display = 'block';
-        document.querySelector('.gallery').style.display = 'none';
-    }
-
+function backToGallery() {
+    document.querySelector('.generator').style.display = 'none';
+    document.querySelector('.gallery').style.display = 'block';
+}
+function editMeme() {
+    document.querySelector('.generator').style.display = 'block';
+    document.querySelector('.gallery').style.display = 'none';
 }
 
 
@@ -35,7 +34,7 @@ function RenderImages(images) {
     var strHTML = '';
     for (var i = 0; i < images.length; i++) {
         // console.log(images[i].url)
-        var hex = '<div class="hexagon" onclick="setMeme(this)" id="'+images[i].url+'" style="background-image:url(' + images[i].url + ');">' +
+        var hex = '<div class="hexagon" onclick="setMeme(this)" id="' + images[i].url + '" style="background-image:url(' + images[i].url + ');">' +
             '<div class="hexTop" ></div>' +
             '<div class="hexBottom" ></div>' +
             '</div>';
