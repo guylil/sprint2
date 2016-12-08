@@ -1,26 +1,89 @@
 'use strict';
 console.log('hello canvas');
 
-function canvasPaint(meme = '../assets/img/3.png', canvasHeight = 300, canvasWidth = 400, inputTopText = "not sure if...", inputBottomText = "or if....", topTextHeight = 7, bottomTextHeight = 7, topTextAlign = 40, bottomTextAlign = 150, textFontSize = 30, topTextColor = 'white', bottomTextColor = 'red', transText = 0.5) {
+editMeme();
+var gMeme = '../assets/img/3.png';
+var gCanvasHeight = 300; // TODO MAKE RESPONSIVE
+var gCanvasWidth = 400; // TODO MAKE RESPONSIVE
+var gInputTopText = 'YYY?';
+var gInputBottomText = 'Nope nope nope';
+var gTopTextHeight = 7;
+var gBottomTextHeight = 7;
+var gTopTextAlign = 40;
+var gBottomTextAlign = 150;
+var gTextFontSize = 30;
+var gTopTextColor = 'white';
+var gBottomTextColor = 'red';
+var gTransText = 0.5;
+
+function setMeme(memeSrc) {
+    gMeme = memeSrc;
+};
+function setCanvasSize(canvasHeight, canvasWidth) {
+    gCanvasHeight = canvasHeight;
+    gCanvasWidth = canvasWidth;
+};
+
+function setText(stringTopText, StringBottumText) {
+    gInputTopText = stringTopText;
+    gInputBottomText = StringBottumText;
+};
+function setBars(topBar, bottomBar) {
+    gTopTextHeight = topBar;
+    gBottomTextHeight = bottomBar;
+};
+
+function increaseTextSize() {
+    gTextFontSize++;
+};
+function decreaseTextSize() {
+    gTextFontSize--;
+};
+function setTopTextColor(color) {
+    gTopTextColor = color;
+};
+function setBottomTextColor(color) {
+    gBottomTextColor = color;
+};
+
+function setOpacity(number) {
+    gTransText = number;
+};
+// canvasPaint(gMeme, gCanvasHeight, gCanvasWidth, gInputTopText, gInputBottomText, gTopTextHeight, gBottomTextHeight, gTopTextAlign, gBottomTextAlign, gTextFontSize, gTopTextColor, gBottomTextColor, gTransText);
+function enterText1(elInputText) {
+    var text1 = document.getElementsByName('textarea1');
+    var text2 = document.getElementsByName('textarea2');
+    gTextFontSize=30;
+    var inputTopText = '' + text1[0].value;
+    var inputBottomText = '' + text2[0].value;
+    setText(inputTopText,inputBottomText);
+    canvasPaint();
+};
+// addLines();
+// function canvasPaint(meme, canvasHeight, canvasWidth, inputTopText, inputBottomText, topTextHeight, bottomTextHeight, topTextAlign , bottomTextAlign, textFontSize , topTextColor , bottomTextColor , transText)
+// function canvasPaint(meme = '../assets/img/3.png', canvasHeight = 300, canvasWidth = 400, inputTopText = "not sure if...", inputBottomText = "or if....", topTextHeight = 7, bottomTextHeight = 7, topTextAlign = 40, bottomTextAlign = 150, textFontSize = 30, topTextColor = 'white', bottomTextColor = 'red', transText = 0.5)
+
+
+function canvasPaint(topTextColor = 'white', bottomTextColor = 'red', transText = 0.5) {
     var elCanvas = document.getElementById('canvas');
     var ctx = canvas.getContext('2d');
-    canvas.height = canvasHeight;
-    canvas.width = canvasWidth;
+    canvas.height = gCanvasHeight;
+    canvas.width = gCanvasWidth;
     // ctx.fillStyle = '#0e70d1';
     var img = new Image();
-    img.src = meme;
+    img.src = gMeme;
     img.onload = function () {
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         // ctx.save();
-        ctx.font = textFontSize + 'pt David';
-        ctx.fillStyle = 'rgba(0,0,0,' + transText + ')';
-        ctx.fillRect(0, 0, canvas.width, canvas.height / topTextHeight);
-        ctx.fillRect(0, canvas.height - canvas.height / bottomTextHeight, canvas.width, canvas.height / bottomTextHeight);
+        ctx.font = gTextFontSize + 'pt David';
+        ctx.fillStyle = 'rgba(0,0,0,' + gTransText + ')';
+        ctx.fillRect(0, 0, canvas.width, canvas.height / gTopTextHeight);
+        ctx.fillRect(0, canvas.height - canvas.height / gBottomTextHeight, canvas.width, canvas.height / gBottomTextHeight);
         // ctx.save();
         ctx.fillStyle = topTextColor;
-        // ctx.fillText(inputTopText.toUpperCase(), topTextAlign, textFontSize + 3);
+        ctx.fillText(gInputTopText.toUpperCase(), gTopTextAlign, gTextFontSize + 3);
         ctx.fillStyle = bottomTextColor;
-        // ctx.fillText(inputBottomText.toUpperCase(), bottomTextAlign, canvas.height - 5);
+        ctx.fillText(gInputBottomText.toUpperCase(), gBottomTextAlign, canvas.height - 5);
         ctx.font = '10pt Dvaid'
         ctx.fillStyle = '#fff';
         ctx.fillText("Noa's & Guy's MemeGenerator", 10, 300);
@@ -38,32 +101,6 @@ function canvasPaint(meme = '../assets/img/3.png', canvasHeight = 300, canvasWid
 }
 
 canvasPaint();
-
-function enterText1(elInputText) {
-    var text1 = document.getElementsByName('textarea1');
-    var text2 = document.getElementsByName('textarea2');
-    var elCanvas = document.getElementById('canvas');
-    var ctx = canvas.getContext('2d');
-    var textFontSize =30;
-    // console.log(text1[0].value);
-    // console.log(elInputText);
-    ctx.font = textFontSize + 'pt David';
-    var inputTopText = '' + text1[0].value;
-    var inputBottomText = '' + text2[0].value;
-    // ctx.restore();
-    // ctx.fillText(inputTopText.toUpperCase(), topTextAlign, textFontSize + 3);
-    // ctx.fillText(inputBottomText.toUpperCase(), bottomTextAlign, canvas.height - 5);
-    ctx.fillText(inputTopText.toUpperCase(), 90, 33);
-    ctx.fillText(inputBottomText.toUpperCase(), 40, canvas.height - 5);
-
-
-    // canvasPaint();
-};
-// addLines();
-// function canvasPaint(meme, canvasHeight, canvasWidth, inputTopText, inputBottomText, topTextHeight, bottomTextHeight, topTextAlign , bottomTextAlign, textFontSize , topTextColor , bottomTextColor , transText)
-// function canvasPaint(meme = '../assets/img/3.png', canvasHeight = 300, canvasWidth = 400, inputTopText = "not sure if...", inputBottomText = "or if....", topTextHeight = 7, bottomTextHeight = 7, topTextAlign = 40, bottomTextAlign = 150, textFontSize = 30, topTextColor = 'white', bottomTextColor = 'red', transText = 0.5)
-
-
 function addLinesAndText(textFont, topTextSize) {
     // ctx.fillRect(0, 0, canvas.width, canvas.height / topTextHeight);
     // ctx.fillRect(0, canvas.height - canvas.height / bottomTextHeight, canvas.width, canvas.height / bottomTextHeight);
