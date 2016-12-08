@@ -1,9 +1,9 @@
 'use strict';
 
 var gImages = [
-    { id: '1', url: '/assets/img/1.jpg', keywords: ['cry', 'sad'] },
-    { id: '2', url: '/assets/img/2.jpg', keywords: ['sarcastic'] },
-    { id: '3', url: '/assets/img/3.png', keywords: ['naughty', 'girl'] },
+    { id: '1', url: '../assets/img/1.jpg', keywords: ['cry', 'sad'] },
+    { id: '2', url: '../assets/img/2.jpg', keywords: ['sarcastic'] },
+    { id: '3', url: '../assets/img/3.png', keywords: ['naughty', 'girl'] },
     { id: '4', url: '../assets/img/4.png', keywords: ['pirate'] },
     { id: '5', url: '../assets/img/6.jpg', keywords: ['future'] },
     { id: '6', url: '../assets/img/5.png', keywords: ['fry'] },
@@ -34,9 +34,10 @@ function RenderImages(images) {
     var img = document.querySelector('.my-imges');
     var strHTML = '';
     for (var i = 0; i < images.length; i++) {
-        var hex = '<div class="hexagon" style="background-image:url(' + images[i].url + ');">' +
-            '<div class="hexTop"></div>' +
-            '<div class="hexBottom"></div>' +
+        // console.log(images[i].url)
+        var hex = '<div class="hexagon" onclick="setMeme(this)" id="'+images[i].url+'" style="background-image:url(' + images[i].url + ');">' +
+            '<div class="hexTop" ></div>' +
+            '<div class="hexBottom" ></div>' +
             '</div>';
         strHTML += hex;
     }
