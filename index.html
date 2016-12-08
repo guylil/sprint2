@@ -32,6 +32,14 @@
                 <button type="button" class=" card">	card mode &#8594;	</button>
                 <button type="button" class=" list">list mode &#8595;</button>
                 <button type="button" class=" list" onclick="editMeme()">edit meme</button>
+
+            </div>
+            <section>
+                <div class="gallery">
+                    <div class="my-imges flex flex-wrap">
+                    </div>
+                </div>
+
                 <p>
                     <span class="cry">cry</span>
                     <span class="sad">sad</span>
@@ -39,21 +47,15 @@
                     <span class="naughty">naughty</span>
                     <span class="girl">girl</span>
                 </p>
-            </div>
-             <section>
-              <div class="gallery">
-                <div class="my-imges">
-                </div>
-            </div>
-        </section>
-          
+            </section>
+
 
         </section>
         <section class=" section generator flex">
             <!--CANVAS AND STUFF-->
             <div class=" gen-container">
                 <div class=" canvas-container flex">
-                <canvas id="canvas" class=" canvas" height="300" width="400">CANVAS</canvas>
+                    <canvas id="canvas" class=" canvas" height="300" width="400">CANVAS</canvas>
                 </div>
                 <div class="edit-container">
                     <div class="edit-inner-container flex-wrap">
@@ -116,9 +118,9 @@
         </section>
 
         <section class=" section about flex">
-            <div class="hexagon flex">
-                <div class="face1"></div>
-                <div class="face2"></div>
+            <div class="hexagon" class="flex" style="background-image:url(assets/img/about.png)">
+                <div class="hexTop"></div>
+                <div class="hexBottom"></div>
                 <!--<img src="assets/img/about.png" alt="About picture" class=" article-img hexagon"></img>-->
             </div>
 

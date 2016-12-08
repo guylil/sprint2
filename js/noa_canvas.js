@@ -6,7 +6,7 @@ var context = canvas.getContext('2d');
 var x = canvas.width / 2;
 var y = canvas.height / 2;
 
-
+//TODO: align text should be in one func
 function alignTextRight() {
     // context.font = 'italic 40pt Calibri';
     context.textAlign = 'right';
