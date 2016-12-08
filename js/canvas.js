@@ -1,7 +1,7 @@
 'use strict';
 console.log('hello canvas');
 
-editMeme();
+// editMeme();
 var gMeme = '../assets/img/3.png';
 var gCanvasHeight = 300; // TODO MAKE RESPONSIVE
 var gCanvasWidth = 400; // TODO MAKE RESPONSIVE
@@ -17,7 +17,9 @@ var gBottomTextColor = 'black';
 var gTransText = 0.5;
 
 function setMeme(memeSrc) {
-    gMeme = memeSrc;
+    console.log(memeSrc.id);
+    gMeme = memeSrc.id;
+    editMeme()
     canvasPaint();
 };
 function setCanvasSize(canvasHeight, canvasWidth) {
