@@ -52,9 +52,11 @@
         <section class=" section generator flex">
             <!--CANVAS AND STUFF-->
             <div class=" gen-container">
+                <div class=" canvas-container flex">
                 <canvas id="canvas" class=" canvas" height="300" width="400">CANVAS</canvas>
-                <div> Edit Your Meme
-                    <div class="edit-container flex-wrap">
+                </div>
+                <div class="edit-container">
+                    <div class="edit-inner-container flex-wrap">
                         <!--//noa is chacking canvas-->
                         <!--<canvas id="noaCanvas" width="578" height="200"></canvas>-->
                         <!--//mini text editor-->
@@ -78,9 +80,6 @@
                                         <button class="btn Change font" href="#">&#65;</button>
                                         <button class="delete btn">&#x1F5D1;</button>
                                         <button class="delete btn">&#x1F5D1;</button>
-                                        <a id="download" onclick="downloadImg(this)">
-                                            <button>Download as image</button>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -104,6 +103,9 @@
                                         <button class="btn Text shadow" href="#">&#x2751;</button>
                                         <button class="btn Change font" href="#">&#65;</button>
                                         <button class="delete btn">&#x1F5D1;</button>
+                                        <a id="download" onclick="downloadImg(this)">
+                                            <button>Download as image</button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -175,7 +177,7 @@
             </form>
         </section>
     </main>
-    <footer class=" main-footer">JUST ordinary plain black</footer>
+    <footer class=" main-footer">Cofferigth 2016</footer>
 
     <script src="js/main.js"></script>
     <script src="js/search.js"></script>

@@ -12,7 +12,6 @@ var gImages = [
 
 
 function RenderImages(images) {
-    editMeme()
     var img = document.querySelector('.my-imges');
     var strHTML = '';
     for (var i = 0; i < images.length; i++) {
