@@ -6,7 +6,7 @@ function memeSearch(images) {
     
     var text = pressed[0].value;
     var res = images.filter(function (image) {
-        return (image.keywords.join(',').indexOf(text) + 1)
-    })
-    return res
+        return (image.keywords.join(',').indexOf(text) + 1);
+    });
+    return res;
 }

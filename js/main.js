@@ -10,6 +10,7 @@ var gImages = [
 
 ];
 
+RenderImages(gImages);
 
 function RenderImages(images) {
     var img = document.querySelector('.my-imges');
@@ -26,7 +27,6 @@ function RenderImages(images) {
 
 }
 
-RenderImages(gImages);
 
 //TODO: finish when clickedCounter is made by guy the func should be called by search box
 function getDomKeyWord(clickedCounter) {
@@ -58,7 +58,7 @@ function renderCards() {
 function renderList() {
 
 };
-
+//better put in onload but even better in HTML
 document.querySelector('.back-btn').addEventListener('click', function () {
     document.querySelector('.gallery').style.display = 'block';
     document.querySelector('.generator').style.display = 'none';
@@ -68,7 +68,7 @@ function backToGallery() {
     document.querySelector('.generator').style.display = 'none';
     document.querySelector('.gallery').style.display = 'block';
 }
-function editMeme(){
+function editMeme() {
     document.querySelector('.generator').style.display = 'block';
-    document.querySelector('.gallery').style.display = 'none';    
+    document.querySelector('.gallery').style.display = 'none';
 }
