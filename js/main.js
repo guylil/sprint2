@@ -10,7 +10,25 @@ var gImages = [
 
 ];
 
-RenderImages(gImages);
+function init() {
+    RenderImages(gImages);
+    //TODO:better put in HTML
+    document.querySelector('.back-btn').addEventListener('click', function () {
+        document.querySelector('.gallery').style.display = 'block';
+        document.querySelector('.generator').style.display = 'none';
+    });
+
+    function backToGallery() {
+        document.querySelector('.generator').style.display = 'none';
+        document.querySelector('.gallery').style.display = 'block';
+    }
+    function editMeme() {
+        document.querySelector('.generator').style.display = 'block';
+        document.querySelector('.gallery').style.display = 'none';
+    }
+
+}
+
 
 function RenderImages(images) {
     var img = document.querySelector('.my-imges');
@@ -33,24 +51,7 @@ function getDomKeyWord(clickedCounter) {
     var elKeyWord = document.querySelector('.girl');
     elKeyWord.style.fontSize = clickedCounter + 'px';
 }
-
-// function cardModeToggle() {
-//     var btn = document.querySelector('.card');
-//     console.log('elbtn', btn);
-//     btn.addEventListener('click', displayCard);
-// }
-
-// cardModeToggle();
-
-// function displayCard() {
-//     var strHTML = '<div class="my-imges flex flex-direction-row"></div>';
-//     console.log('strHTML', strHTML);
-
-//     var elGallery = document.querySelector('.main gallery');
-//     elGallery.innerHTML = strHTML;
-//     RenderImages();
-// }
-
+//TODO: write functions
 function renderCards() {
 
 };
@@ -58,17 +59,3 @@ function renderCards() {
 function renderList() {
 
 };
-//better put in onload but even better in HTML
-document.querySelector('.back-btn').addEventListener('click', function () {
-    document.querySelector('.gallery').style.display = 'block';
-    document.querySelector('.generator').style.display = 'none';
-});
-
-function backToGallery() {
-    document.querySelector('.generator').style.display = 'none';
-    document.querySelector('.gallery').style.display = 'block';
-}
-function editMeme() {
-    document.querySelector('.generator').style.display = 'block';
-    document.querySelector('.gallery').style.display = 'none';
-}
