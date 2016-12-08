@@ -1,12 +1,14 @@
 .section{
-    max-width: 1020px;
+    width:100%;
+    // max-width: 1020px;
     margin: auto;
     padding-bottom: em(10px);
     padding-left: em(45px);
-    padding-right: em(100px);//TODO:ask guy what is it for
+    padding-right: em(100px);
 }
+
 .gallery{
-    display: block;         
+    display:block;
 }
 .generator{
     background-color:white;
