@@ -9,20 +9,24 @@
     display: block;         
 }
 .generator{
-
-    justify-content: space-between;
-    background-color:rosybrown;
-    color: darkred;
+    background-color:white;
     display: none; 
     height: em(720px);
     height: em(720px);
 }
 .gen-container{
     display: flex;
-    justify-content: center; 
+    justify-content: space-between; 
+}
+.canvas-container{
+    flex-shrink: 3;
+
 }
 .edit-container{
-    padding: 8px;    
+    display: flex;
+    padding-left: 8px;
+}
+.edit-inner-container{
 }
 .about{
     background-color: #2eb398;
